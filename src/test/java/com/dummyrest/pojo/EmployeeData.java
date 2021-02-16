@@ -7,14 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EmployeeData {
 
-    @Override
-    public String toString() {
-        return "EmployeeData{" +
-                "employee_name='" + employee_name + '\'' +
-                ", employee_age=" + employee_age +
-                ", employee_salary=" + employee_salary +
-                '}';
-    }
+
 
     private String employee_name;
     private String employee_age;
@@ -37,6 +30,14 @@ public class EmployeeData {
 
     public String getEmployee_age() {
         return employee_age;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "Name: " + employee_name + "\n"+
+                "Age: " + employee_age + "\n"+
+                "Salary: $" + employee_salary ;
     }
 
 }

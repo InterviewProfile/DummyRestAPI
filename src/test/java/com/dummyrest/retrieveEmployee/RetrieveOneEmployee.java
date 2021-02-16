@@ -1,17 +1,9 @@
 package com.dummyrest.retrieveEmployee;
 import com.dummyrest.pojo.EmployeeData;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
-
-import java.util.List;
-import java.util.Scanner;
-
 import static io.restassured.RestAssured.* ;
-import static org.hamcrest.Matchers.* ;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RetrieveOneEmployee {
 
@@ -58,11 +50,11 @@ public class RetrieveOneEmployee {
 
          String employee_name = jp.getString("data.employee_name");
          String employee_age= jp.getString("data.employee_age");
-         String employee_salary = jp.getString("data.salary");
+         String employee_salary = jp.getString("data.employee_salary");
 
         EmployeeData ed = new EmployeeData(employee_name,employee_salary,employee_age);
 
-        System.out.println("ed = " + ed);
+        System.out.println("Employe Relevant Information: "+"\n" + ed);
 
 
     }
